@@ -9,6 +9,12 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Lato"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -26,8 +32,15 @@
       body,
       html {
         height: 100%;
-        color: #777;
+        color: #805e4e;
         line-height: 1.8;
+      }
+      h1 {
+        font-family: "Quintessential", serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: 66px;
+        text-align: center;
       }
 
       /* Create a Parallax Effect */
@@ -38,13 +51,6 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-      }
-
-      /* First image (Logo. Full height) */
-      .bgimg-1 {
-        background-image: url("./assets/logo.png");
-        min-height: 100%;
-        height: 50%;
       }
 
       /* Second image (Leistungen) */
@@ -73,6 +79,31 @@
       .full-width {
         width: 100%;
       }
+      .white-bg {
+        background-color: white !important;
+      }
+
+      .home-background {
+        background-image: url("./assets/layered_waves_horizontal.svg");
+        aspect-ratio: 900/300;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .center-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .wave-top {
+        background-image: url("./assets/testo.svg");
+        aspect-ratio: 900/150;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
 
       /* Turn off parallax scrolling for tablets and phones */
       @media only screen and (max-device-width: 1600px) {
@@ -81,6 +112,11 @@
         .bgimg-3 {
           background-attachment: scroll;
           min-height: 400px;
+        }
+
+        h1 {
+          margin-top: 40px;
+          font-size: 32px;
         }
       }
     </style>
@@ -145,17 +181,15 @@
     </div>
 
     <!-- First Parallax Image with Logo Text -->
-    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
-      <div class="w3-display-middle" style="white-space: nowrap">
-        <!--         <span
-          class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity"
-          >MY <span class="w3-hide-small">WEBSITE</span> LOGO</span
-        > -->
-      </div>
+    <div class="home-background center-content" id="home">
+      <h1>
+        Atem und Lebendigkeit <br />
+        Brigitte Röcklinger
+      </h1>
     </div>
 
     <!-- Container (Aktuelles Section) -->
-    <div class="w3-content w3-container w3-padding-64" id="aktuelles">
+    <div class="w3-container w3-padding-64 wave-top" id="aktuelles">
       <h3 class="w3-center">Aktuelles</h3>
       <p class="w3-center">
         <span
@@ -472,10 +506,10 @@
           document.documentElement.scrollTop > 100
         ) {
           navbar.className =
-            "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+            "w3-bar" + " w3-card" + " w3-animate-top" + " white-bg";
         } else {
           navbar.className = navbar.className.replace(
-            " w3-card w3-animate-top w3-white",
+            " w3-card w3-animate-top white-bg",
             ""
           );
         }
