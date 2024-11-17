@@ -104,6 +104,11 @@
         background-size: cover;
         background-position: center;
       }
+      .fit-to-parent {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
 
       /* Turn off parallax scrolling for tablets and phones */
       @media only screen and (max-device-width: 1600px) {
@@ -180,12 +185,12 @@
       </div>
     </div>
 
-    <!-- First Parallax Image with Logo Text -->
-    <div class="home-background center-content" id="home">
-      <h1>
-        Atem und Lebendigkeit <br />
-        Brigitte Röcklinger
-      </h1>
+    <div
+      class="center-content parallax home-background"
+      style="height: 50%"
+      id="home"
+    >
+      <img src="./assets/logo.png" class="fit-to-parent" alt="logo" />
     </div>
 
     <!-- Container (Aktuelles Section) -->
