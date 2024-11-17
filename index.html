@@ -123,6 +123,10 @@
           margin-top: 40px;
           font-size: 32px;
         }
+
+        .fit-to-parent {
+          height: 70%;
+        }
       }
     </style>
   </head>
@@ -185,12 +189,14 @@
       </div>
     </div>
 
+    <!-- Header -->
     <div
-      class="center-content parallax home-background"
+      class="center-content home-background w3-padding-top-24"
       style="height: 50%"
       id="home"
     >
-      <img src="./assets/logo.png" class="fit-to-parent" alt="logo" />
+      <img src="./assets/logo_classic.png" class="fit-to-parent w3-hide-small" alt="logo" />
+      <img src="./assets/logo_mobile.png" class="fit-to-parent w3-hide-large w3-hide-medium" alt="logo" />
     </div>
 
     <!-- Container (Aktuelles Section) -->
@@ -266,31 +272,16 @@
       </div>
     </div>
 
-    <!--     <div class="w3-row w3-center w3-dark-grey w3-padding-16">
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">14+</span><br />
-        Partners
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">55+</span><br />
-        Projects Done
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">89+</span><br />
-        Happy Clients
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">150+</span><br />
-        Meetings
-      </div>
-    </div> -->
-
     <!-- Container (Leistungen Section) -->
-    <div class="w3-container" style="padding: 128px 16px" id="leistungen">
+    <div class="w3-container" style="padding: 16px 16px" id="leistungen">
       <h3 class="w3-center">Meine Leistungen</h3>
-      <p class="w3-center w3-large">The ones who runs this company</p>
+      <p class="w3-center w3-large">
+        <em
+          >Individuelle Termine und weitere Informationen gerne auf Anfrage</em
+        >
+      </p>
       <div class="w3-row-padding" style="margin-top: 64px">
-        <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-col l4 m6 w3-margin-bottom">
           <div class="w3-card">
             <img
               src="./assets/leistung_einzeln.jpg"
@@ -300,10 +291,8 @@
             <div class="w3-container">
               <h3>Atemreise</h3>
               <p class="w3-opacity">Einzelbegleitung</p>
-              <p>
-                Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse
-                sodales pellentesque elementum.
-              </p>
+              <p>"Let your breathing guide you home."</p>
+              <p><strong>Dauer:</strong> 1 1/2 bis 2 Stunden</p>
               <p>
                 <button class="w3-button w3-light-grey w3-block">
                   <i class="fa fa-plus-circle"></i> Mehr Infos
@@ -312,7 +301,7 @@
             </div>
           </div>
         </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-col l4 m6 w3-margin-bottom">
           <div class="w3-card">
             <img
               src="./assets/leistung_einzeln.jpg"
@@ -323,9 +312,11 @@
               <h3>Körperweisheit</h3>
               <p class="w3-opacity">Einzelbegleitung</p>
               <p>
-                Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse
-                sodales pellentesque elementum.
+                Sanfte Übungen laden dich ein, deinen Körper ganzheitlicher zu
+                “bewohnen”. Es gibt nichts zu tun, außer zu fühlen und bewusst
+                wahrzunehmen, was ist und sich zeigen möchte.
               </p>
+              <p><strong>Dauer:</strong> 1 1/2 bis 3 Stunden</p>
               <p>
                 <button class="w3-button w3-light-grey w3-block">
                   <i class="fa fa-plus-circle"></i> Mehr Infos
@@ -334,7 +325,7 @@
             </div>
           </div>
         </div>
-        <div class="w3-col l3 m6 w3-margin-bottom">
+        <div class="w3-col l4 m6 w3-margin-bottom">
           <div class="w3-card">
             <img
               src="./assets/leistung_gruppe.jpg"
@@ -342,13 +333,16 @@
               style="width: 100%"
             />
             <div class="w3-container">
-              <h3>Atem und Lebendigkeit</h3>
-              <h4>Ein Tag unter Frauen</h4>
+              <h3>Ein Tag unter Frauen</h3>
               <p class="w3-opacity">Gruppenworkshop</p>
               <p>
-                Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse
-                sodales pellentesque elementum.
+                Als Begleiterin führe ich dich durch die Atemreise. Im
+                Nachgespräch gibt es die Möglichkeit, über das Erlebte zu
+                sprechen oder auch zu zeichnen, um Gefühle und Erfahrungen
+                bestmöglich zu integrieren.
               </p>
+              <p><strong>Dauer:</strong> 1 Tag </p>
+              <strong>Kosten:</strong> 90 €</p>
               <p>
                 <button class="w3-button w3-light-grey w3-block">
                   <i class="fa fa-plus-circle"></i> Mehr Infos
@@ -360,118 +354,37 @@
       </div>
     </div>
 
-    <!-- Second Parallax Image with Leistungen Text -->
-    <div class="bgimg-2 w3-display-container w3-opacity-min">
-      <div class="w3-display-middle">
-        <span class="w3-xxlarge w3-text-white w3-wide">Leistungen</span>
-      </div>
-    </div>
-
-    <!-- Modal for full size images on click-->
-    <div
-      id="modal01"
-      class="w3-modal w3-black"
-      onclick="this.style.display='none'"
-    >
-      <span
-        class="w3-button w3-large w3-black w3-display-topright"
-        title="Close Modal Image"
-        ><i class="fa fa-remove"></i
-      ></span>
-      <div
-        class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64"
-      >
-        <img id="img01" class="w3-image" />
-        <p id="caption" class="w3-opacity w3-large"></p>
-      </div>
-    </div>
-
-    <!-- Third Parallax Image with Leistungen Text -->
-    <div class="bgimg-3 w3-display-container w3-opacity-min">
-      <div class="w3-display-middle">
-        <span class="w3-xxlarge w3-text-white w3-wide">KONTAKT</span>
-      </div>
-    </div>
-
     <!-- Container (Contact Section) -->
-    <div class="w3-content w3-container w3-padding-64" id="kontakt">
-      <h3 class="w3-center">WHERE I WORK</h3>
-      <p class="w3-center"><em>I'd love your feedback!</em></p>
-
-      <div class="w3-row w3-padding-32 w3-section">
-        <div class="w3-col m4 w3-container">
-          <img
-            src="/w3images/map.jpg"
-            class="w3-image w3-round"
-            style="width: 100%"
-          />
-        </div>
-        <div class="w3-col m8 w3-panel">
+    <div class="w3-container w3-padding-16 peachy-background" id="kontakt">
+      <h3 class="w3-center">KONTAKT</h3>
+      <div class="w3-row w3-padding-32 w3-center">
+        <div class="w3-center">
           <div class="w3-large w3-margin-bottom">
             <i
               class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
             ></i>
-            Chicago, US<br />
+            2345 Brunn am Gebirge<br />
             <i
               class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
             ></i>
-            Phone: +00 151515<br />
+            Telefonnummer: <a href="tel:+43 680 1283654">+43 680 1283654</a><br />
             <i
               class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
             ></i>
-            Email: mail@mail.com<br />
+            Email: <a href="mailto:atem.lebendigkeit@gmail.com">atem.lebendigkeit@gmail.com</a><br />
           </div>
-          <p>
-            Swing by for a cup of <i class="fa fa-coffee"></i>, or leave me a
-            note:
-          </p>
-          <form action="/action_page.php" target="_blank">
-            <div class="w3-row-padding" style="margin: 0 -16px 8px -16px">
-              <div class="w3-half">
-                <input
-                  class="w3-input w3-border"
-                  type="text"
-                  placeholder="Name"
-                  required
-                  name="Name"
-                />
-              </div>
-              <div class="w3-half">
-                <input
-                  class="w3-input w3-border"
-                  type="text"
-                  placeholder="Email"
-                  required
-                  name="Email"
-                />
-              </div>
-            </div>
-            <input
-              class="w3-input w3-border"
-              type="text"
-              placeholder="Message"
-              required
-              name="Message"
-            />
-            <button
-              class="w3-button w3-black w3-right w3-section"
-              type="submit"
-            >
-              <i class="fa fa-paper-plane"></i> SEND MESSAGE
-            </button>
-          </form>
         </div>
       </div>
     </div>
 
     <!-- Footer -->
     <footer
-      class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off"
+      class="w3-center peachy-background w3-padding-16"
     >
-      <a href="#home" class="w3-button w3-light-grey"
-        ><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a
+      <a href="#home" class="w3-button w3-white"
+        ><i class="fa fa-arrow-up w3-margin-right"></i>Zurück zum Anfang</a
       >
-      <div class="w3-xlarge w3-section">
+<!--       <div class="w3-xlarge w3-section">
         <i class="fa fa-facebook-official w3-hover-opacity"></i>
         <i class="fa fa-instagram w3-hover-opacity"></i>
         <i class="fa fa-snapchat w3-hover-opacity"></i>
@@ -488,18 +401,10 @@
           class="w3-hover-text-green"
           >w3.css</a
         >
-      </p>
+      </p> -->
     </footer>
 
     <script>
-      // Modal Image Gallery
-      function onClick(element) {
-        document.getElementById("img01").src = element.src;
-        document.getElementById("modal01").style.display = "block";
-        var captionText = document.getElementById("caption");
-        captionText.innerHTML = element.alt;
-      }
-
       // Change style of navbar on scroll
       window.onscroll = function () {
         myFunction();
