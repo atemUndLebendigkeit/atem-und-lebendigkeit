@@ -109,6 +109,9 @@
         height: 100%;
         object-fit: contain;
       }
+      .flex {
+        display: flex;
+      }
 
       /* Turn off parallax scrolling for tablets and phones */
       @media only screen and (max-device-width: 1600px) {
@@ -195,8 +198,16 @@
       style="height: 50%"
       id="home"
     >
-      <img src="./assets/logo_classic.png" class="fit-to-parent w3-hide-small" alt="logo" />
-      <img src="./assets/logo_mobile.png" class="fit-to-parent w3-hide-large w3-hide-medium" alt="logo" />
+      <img
+        src="./assets/logo_classic.png"
+        class="fit-to-parent w3-hide-small"
+        alt="logo"
+      />
+      <img
+        src="./assets/logo_mobile.png"
+        class="fit-to-parent w3-hide-large w3-hide-medium"
+        alt="logo"
+      />
     </div>
 
     <!-- Container (Aktuelles Section) -->
@@ -214,8 +225,88 @@
       <br />
     </div>
 
+    <!-- Container (Leistungen Section) -->
+    <div
+      class="w3-container peachy-background"
+      style="padding: 16px 16px"
+      id="leistungen"
+    >
+      <h3 class="w3-center">Meine Leistungen</h3>
+      <p class="w3-center w3-large">
+        <em
+          >Individuelle Termine und weitere Informationen gerne auf Anfrage</em
+        >
+      </p>
+      <div class="w3-row-padding flex" style="margin-top: 64px">
+        <div class="w3-col l4 m6 w3-margin-bottom flex">
+          <div class="w3-card w3-white w3-round-medium">
+            <img src="./assets/atemreise.jpg" alt="John" style="width: 100%" />
+            <div class="w3-container">
+              <h3>Atemreise</h3>
+              <p class="w3-opacity">Einzelbegleitung</p>
+              <p>"Let your breathing guide you home."</p>
+              <p><strong>Dauer:</strong> 1 1/2 bis 2 Stunden</p>
+              <p>
+                <button class="w3-button w3-light-grey w3-block">
+                  <i class="fa fa-plus-circle"></i> Mehr Infos
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col l4 m6 w3-margin-bottom flex">
+          <div class="w3-card w3-white w3-round-medium">
+            <img
+              src="./assets/koerperweisheit.jpg"
+              alt="John"
+              style="width: 100%"
+            />
+            <div class="w3-container space-between">
+              <div>
+                <h3>Körperweisheit</h3>
+                <p class="w3-opacity">Einzelbegleitung</p>
+                <p>
+                  Sanfte Übungen laden dich ein, deinen Körper ganzheitlicher zu
+                  “bewohnen”. Es gibt nichts zu tun, außer zu fühlen und bewusst
+                  wahrzunehmen, was ist und sich zeigen möchte.
+                </p>
+                <p><strong>Dauer:</strong> 1 1/2 bis 3 Stunden</p>
+              </div>
+              <button class="w3-button w3-light-grey w3-block">
+                <i class="fa fa-plus-circle"></i> Mehr Infos
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="w3-col l4 m6 w3-margin-bottom flex">
+          <div class="w3-card w3-white w3-round-medium">
+            <img src="./assets/gruppe.jpg" alt="Jane" style="width: 100%" />
+            <div class="w3-container">
+              <h3>Ein Tag unter Frauen</h3>
+              <p class="w3-opacity">Gruppenworkshop</p>
+              <p>
+                Als Begleiterin führe ich dich durch die Atemreise. Im
+                Nachgespräch gibt es die Möglichkeit, über das Erlebte zu
+                sprechen oder auch zu zeichnen, um Gefühle und Erfahrungen
+                bestmöglich zu integrieren.
+              </p>
+              <p>
+                <strong>Dauer:</strong> 1 Tag <br />
+                <strong>Kosten:</strong> 90 €
+              </p>
+              <p>
+                <button class="w3-button w3-light-grey w3-block">
+                  <i class="fa fa-plus-circle"></i> Mehr Infos
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Container (Uebermich Section) -->
-    <div class="w3-container w3-padding-64 peachy-background" id="uebermich">
+    <div class="w3-container w3-padding-64" id="uebermich">
       <div class="w3-content">
         <h3 class="w3-center">Über mich</h3>
         <p class="w3-center">
@@ -272,88 +363,6 @@
       </div>
     </div>
 
-    <!-- Container (Leistungen Section) -->
-    <div class="w3-container" style="padding: 16px 16px" id="leistungen">
-      <h3 class="w3-center">Meine Leistungen</h3>
-      <p class="w3-center w3-large">
-        <em
-          >Individuelle Termine und weitere Informationen gerne auf Anfrage</em
-        >
-      </p>
-      <div class="w3-row-padding" style="margin-top: 64px">
-        <div class="w3-col l4 m6 w3-margin-bottom">
-          <div class="w3-card">
-            <img
-              src="./assets/leistung_einzeln.jpg"
-              alt="John"
-              style="width: 100%"
-            />
-            <div class="w3-container">
-              <h3>Atemreise</h3>
-              <p class="w3-opacity">Einzelbegleitung</p>
-              <p>"Let your breathing guide you home."</p>
-              <p><strong>Dauer:</strong> 1 1/2 bis 2 Stunden</p>
-              <p>
-                <button class="w3-button w3-light-grey w3-block">
-                  <i class="fa fa-plus-circle"></i> Mehr Infos
-                </button>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="w3-col l4 m6 w3-margin-bottom">
-          <div class="w3-card">
-            <img
-              src="./assets/leistung_einzeln.jpg"
-              alt="John"
-              style="width: 100%"
-            />
-            <div class="w3-container">
-              <h3>Körperweisheit</h3>
-              <p class="w3-opacity">Einzelbegleitung</p>
-              <p>
-                Sanfte Übungen laden dich ein, deinen Körper ganzheitlicher zu
-                “bewohnen”. Es gibt nichts zu tun, außer zu fühlen und bewusst
-                wahrzunehmen, was ist und sich zeigen möchte.
-              </p>
-              <p><strong>Dauer:</strong> 1 1/2 bis 3 Stunden</p>
-              <p>
-                <button class="w3-button w3-light-grey w3-block">
-                  <i class="fa fa-plus-circle"></i> Mehr Infos
-                </button>
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="w3-col l4 m6 w3-margin-bottom">
-          <div class="w3-card">
-            <img
-              src="./assets/leistung_gruppe.jpg"
-              alt="Jane"
-              style="width: 100%"
-            />
-            <div class="w3-container">
-              <h3>Ein Tag unter Frauen</h3>
-              <p class="w3-opacity">Gruppenworkshop</p>
-              <p>
-                Als Begleiterin führe ich dich durch die Atemreise. Im
-                Nachgespräch gibt es die Möglichkeit, über das Erlebte zu
-                sprechen oder auch zu zeichnen, um Gefühle und Erfahrungen
-                bestmöglich zu integrieren.
-              </p>
-              <p><strong>Dauer:</strong> 1 Tag </p>
-              <strong>Kosten:</strong> 90 €</p>
-              <p>
-                <button class="w3-button w3-light-grey w3-block">
-                  <i class="fa fa-plus-circle"></i> Mehr Infos
-                </button>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Container (Contact Section) -->
     <div class="w3-container w3-padding-16 peachy-background" id="kontakt">
       <h3 class="w3-center">KONTAKT</h3>
@@ -367,24 +376,26 @@
             <i
               class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
             ></i>
-            Telefonnummer: <a href="tel:+43 680 1283654">+43 680 1283654</a><br />
+            Telefonnummer: <a href="tel:+43 680 1283654">+43 680 1283654</a
+            ><br />
             <i
               class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"
             ></i>
-            Email: <a href="mailto:atem.lebendigkeit@gmail.com">atem.lebendigkeit@gmail.com</a><br />
+            Email:
+            <a href="mailto:atem.lebendigkeit@gmail.com"
+              >atem.lebendigkeit@gmail.com</a
+            ><br />
           </div>
         </div>
       </div>
     </div>
 
     <!-- Footer -->
-    <footer
-      class="w3-center peachy-background w3-padding-16"
-    >
+    <footer class="w3-center peachy-background w3-padding-16">
       <a href="#home" class="w3-button w3-white"
         ><i class="fa fa-arrow-up w3-margin-right"></i>Zurück zum Anfang</a
       >
-<!--       <div class="w3-xlarge w3-section">
+      <!--       <div class="w3-xlarge w3-section">
         <i class="fa fa-facebook-official w3-hover-opacity"></i>
         <i class="fa fa-instagram w3-hover-opacity"></i>
         <i class="fa fa-snapchat w3-hover-opacity"></i>
