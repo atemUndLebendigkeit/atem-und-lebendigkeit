@@ -53,7 +53,7 @@
         background-size: cover;
       }
 
-      /* Second image (Leistungen) */
+      /* Second image (Angebote) */
       .bgimg-2 {
         background-image: url("/w3images/parallax2.jpg");
         min-height: 400px;
@@ -109,7 +109,7 @@
         height: 100%;
         object-fit: contain;
       }
-      .flex {
+      .flex-horizontal {
         display: flex;
       }
 
@@ -130,6 +130,10 @@
         .fit-to-parent {
           height: 70%;
         }
+
+        .flex-horizontal {
+          display: block;
+        }
       }
     </style>
   </head>
@@ -149,8 +153,8 @@
         <a href="#aktuelles" class="w3-bar-item w3-button w3-hide-small"
           ><i class="fa fa-user"></i> AKTUELLES</a
         >
-        <a href="#leistungen" class="w3-bar-item w3-button w3-hide-small"
-          ><i class="fa fa-th"></i> LEISTUNGEN</a
+        <a href="#angebote" class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-th"></i> ANGEBOTE</a
         >
         <a href="#uebermich" class="w3-bar-item w3-button w3-hide-small"
           ><i class="fa fa-user"></i> ÜBER MICH</a
@@ -172,10 +176,10 @@
           >AKTUELLES</a
         >
         <a
-          href="#leistungen"
+          href="#angebote"
           class="w3-bar-item w3-button"
           onclick="toggleFunction()"
-          >LEISTUNGEN</a
+          >ANGEBOTE</a
         >
         <a
           href="#uebermich"
@@ -225,27 +229,32 @@
       <br />
     </div>
 
-    <!-- Container (Leistungen Section) -->
+    <!-- Container (Angebote Section) -->
     <div
       class="w3-container peachy-background"
       style="padding: 16px 16px"
-      id="leistungen"
+      id="angebote"
     >
-      <h3 class="w3-center">Meine Leistungen</h3>
-      <p class="w3-center w3-large">
-        <em
-          >Individuelle Termine und weitere Informationen gerne auf Anfrage</em
-        >
-      </p>
-      <div class="w3-row-padding flex" style="margin-top: 64px">
-        <div class="w3-col l4 m6 w3-margin-bottom flex">
+      <h3 class="w3-center">Angebote</h3>
+      <div class="w3-row-padding flex-horizontal" style="margin-top: 32px">
+        <div class="w3-col l4 m6 w3-margin-bottom flex-horizontal">
           <div class="w3-card w3-white w3-round-medium">
-            <img src="./assets/atemreise.jpg" alt="John" style="width: 100%" />
+            <img
+              src="./assets/koerperweisheit.jpg"
+              alt="John"
+              style="width: 100%"
+            />
             <div class="w3-container">
               <h3>Atemreise</h3>
               <p class="w3-opacity">Einzelbegleitung</p>
-              <p>"Let your breathing guide you home."</p>
-              <p><strong>Dauer:</strong> 1 1/2 bis 2 Stunden</p>
+              <p>
+                "Let your breathing guide you home." <br />Bewusstes Atmen ist
+                eine Selbsterfahrungsreise, die dazu anregt, den Atemfluss zu
+                entspannen und zu vertiefen. Die Wahrnehmung des Körpers und der
+                Gefühle werden bewusster. Die Stressregulation verbessert sich
+                und das Vertrauen in die eigene Körperweisheit wird stärker.
+              </p>
+              <p><strong>Dauer:</strong> 1 &frac12; Stunden</p>
               <p>
                 <button class="w3-button w3-light-grey w3-block">
                   <i class="fa fa-plus-circle"></i> Mehr Infos
@@ -254,23 +263,20 @@
             </div>
           </div>
         </div>
-        <div class="w3-col l4 m6 w3-margin-bottom flex">
+        <div class="w3-col l4 m6 w3-margin-bottom flex-horizontal">
           <div class="w3-card w3-white w3-round-medium">
-            <img
-              src="./assets/koerperweisheit.jpg"
-              alt="John"
-              style="width: 100%"
-            />
+            <img src="./assets/atemreise.jpg" alt="John" style="width: 100%" />
             <div class="w3-container space-between">
               <div>
                 <h3>Körperweisheit</h3>
-                <p class="w3-opacity">Einzelbegleitung</p>
+                <p class="w3-opacity">Einzelbegleitung für Frauen</p>
                 <p>
-                  Sanfte Übungen laden dich ein, deinen Körper ganzheitlicher zu
-                  “bewohnen”. Es gibt nichts zu tun, außer zu fühlen und bewusst
-                  wahrzunehmen, was ist und sich zeigen möchte.
+                  Raus aus dem Kopf - rein ins Spüren! <br />Sanfte Übungen aus
+                  dem körperorientiertem Sexualcoaching laden dich ein, deine
+                  Lebenskraft-Energie bewusst wahrzunehmen, zu intensivieren und
+                  für das einzusetzen, was dir wichtig ist.
                 </p>
-                <p><strong>Dauer:</strong> 1 1/2 bis 3 Stunden</p>
+                <p><strong>Dauer:</strong> 1 &frac12; bis 3 Stunden</p>
               </div>
               <button class="w3-button w3-light-grey w3-block">
                 <i class="fa fa-plus-circle"></i> Mehr Infos
@@ -278,21 +284,20 @@
             </div>
           </div>
         </div>
-        <div class="w3-col l4 m6 w3-margin-bottom flex">
+        <div class="w3-col l4 m6 w3-margin-bottom flex-horizontal">
           <div class="w3-card w3-white w3-round-medium">
             <img src="./assets/gruppe.jpg" alt="Jane" style="width: 100%" />
             <div class="w3-container">
-              <h3>Ein Tag unter Frauen</h3>
-              <p class="w3-opacity">Gruppenworkshop</p>
-              <p>
-                Als Begleiterin führe ich dich durch die Atemreise. Im
-                Nachgespräch gibt es die Möglichkeit, über das Erlebte zu
-                sprechen oder auch zu zeichnen, um Gefühle und Erfahrungen
-                bestmöglich zu integrieren.
+              <h3>Zeit unter Frauen</h3>
+              <p class="w3-opacity">
+                Workshop-Reihe: "Reise zu deiner Körperweisheit"
               </p>
               <p>
-                <strong>Dauer:</strong> 1 Tag <br />
-                <strong>Kosten:</strong> 90 €
+                Im Frauenkreis nimmst du dir Zeit, tiefe Verbundenheit mit dir
+                selbst und deinem Körper zu spüren, deine ganz individuelle
+                Weiblichkeit zu erforschen und auszudrücken. Bewusstes Atmen,
+                Übungen aus dem körperorientiertem Sexualcoaching, Meditation
+                und Tanz sind deine Wegbegleiter.
               </p>
               <p>
                 <button class="w3-button w3-light-grey w3-block">
@@ -303,6 +308,11 @@
           </div>
         </div>
       </div>
+      <p class="w3-center w3-large">
+        <em
+          >Individuelle Termine und weitere Informationen gerne auf Anfrage</em
+        >
+      </p>
     </div>
 
     <!-- Container (Uebermich Section) -->
@@ -311,15 +321,26 @@
         <h3 class="w3-center">Über mich</h3>
         <p class="w3-center">
           <em>
-            Gruppenworkshops und individuelle Begleitung auf dem Weg zu mehr
-            Lebendigkeit und Vertrauen in deine Körperweisheit</em
+            Meditation und die Kraft des bewussten Atmens faszinieren mich - sie
+            lassen mich immer wieder zu Ruhe und Klarheit in mir kommen und
+            Verbundenheit mit der Welt um mich herum spüren.</em
           >
         </p>
         <p>
-          Ich liebe es, zu tanzen, in den Wald und auf Berge zu gehen und mich
-          und alle Wesen immer bewusster wahrzunehmen, zu berühren und zu
-          inspirieren und berührt und inspiriert zu werden. Ich bin 1964 geboren
-          und bin glückliche Mutter zweier erwachsener Kinder.
+          Als glückliche Mutter zweier erwachsener Kinder und über 30 Jahre
+          Berufstätigkeit bei einer UNO Organisation kenne ich Herausforderungen
+          gut. Durch meine Aus- und Weiterbildungen als Integrative
+          Atemtrainerin habe ich erfahren wie wohltuend sich Atem- und
+          Körperübungen auf meine Gesundheit, meine Präsenz und Lebensfreude
+          auswirken.<br />
+          Ich freue mich, meinen Erfahrungsschatz weiter zu geben und Menschen
+          in Workshops und Einzelbegleitung mit der Kraft des Atems vertraut zu
+          machen - einer Kraft, die immer für uns da ist. Bewusstes Atmen ist
+          eine Selbsterfahrungsreise, die dazu anregt, die Atemräume besser zu
+          nutzen und das Herz-Kreislauf-System zu unterstützen. Gleichzeitig
+          wird die Wahrnehmung des Körpers und der Gefühle bewusster. Die
+          Stressregulation verbessert sich und das Vertrauen in die eigene
+          Körperweisheit wird stärker.
         </p>
         <div class="w3-row">
           <div class="w3-col m6 w3-center w3-padding-large">
@@ -332,31 +353,32 @@
 
           <!-- Hide this text on small devices -->
           <div class="w3-col m6 w3-hide-small w3-padding-large">
-            <h4>Beruflicher Werdegang</h4>
+            <h4>Ausbildungen und Kurse</h4>
             <ul>
               <li>
-                1989 bis 2021 Planung und Implementierung von Projekten einer
-                UNO Sonderorganisation
+                2021 - 2024 Atemtrainerin, integrative Atemtherapie, Verein
+                Atman
               </li>
-              <li>Seit 2022 Ehrenamtliche Tätigkeit, Rotes Kreuz</li>
-            </ul>
-            <h4>Ausbildungen seit 2014</h4>
-            <ul>
+              <li>
+                2020 - 2023 Ausbildung in körperorientiertem Sexualcoaching für
+                Frauen ("Perlentor" und "Jadetor" bei Nhanga Grunow, DE)
+              </li>
+              <li>Meditation, MBSR (verschiedene Lehrer)</li>
+              <li>Gewaltfreie Kommunikation (Brigitte Puhr)</li>
+              <li>Tantra (verschiedene Lehrer und Institute)</li>
               <li>
                 „Female healing - Universal Healing Tao” bei Lehrern von Mantak
                 Chia, Thailand
               </li>
-              <li>Meditation (verschiedene Lehrer)</li>
-              <li>Gewaltfreie Kommunikation (B. Puhr)</li>
-              <li>Tantra (verschiedene Lehrer u. Institute)</li>
+            </ul>
+
+            <h4>Berufliche Tätigkeit</h4>
+            <ul>
               <li>
-                Ausbildung in Körperorientiertem Sexualcoaching für Frauen
-                („Perlentor“ und „Jadetor“ bei Nhanga Grunow, DE)
+                1989 - 2021 Planung und Implementierung von Projekten einer UNO
+                Sonderorganisation
               </li>
-              <li>
-                Seit 2021 in Ausbildung zur Atemtrainerin, Integrative
-                Atemtherapie, Verein Atman
-              </li>
+              <li>Seit 2022 Ehrenamtliche Tätigkeit, Rotes Kreuz</li>
             </ul>
           </div>
         </div>
