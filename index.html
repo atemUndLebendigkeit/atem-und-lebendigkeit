@@ -52,6 +52,7 @@
         height: 100%;
         color: #805e4e;
         line-height: 1.8;
+        scroll-behavior: smooth;
       }
       h1 {
         font-family: "Quintessential", serif;
@@ -289,32 +290,22 @@
                 Körperweisheit wird stärker.
               </p>
               <p><strong>Dauer:</strong> 1 &frac12; Stunden</p>
-              <p>
-                <button class="w3-button w3-light-grey w3-block">
-                  <i class="fa fa-plus-circle"></i> Mehr Infos
-                </button>
-              </p>
             </div>
           </div>
         </div>
         <div class="w3-col l4 m6 w3-margin-bottom flex-horizontal">
           <div class="w3-card w3-white w3-round-medium">
             <img src="./assets/atemreise.jpg" alt="John" style="width: 100%" />
-            <div class="w3-container space-between">
-              <div>
-                <h3>Körperweisheit</h3>
-                <p class="w3-opacity">Einzelbegleitung für Frauen</p>
-                <p>
-                  Raus aus dem Kopf - rein ins Spüren! <br />Sanfte Übungen aus
-                  dem körperorientiertem Sexualcoaching laden dich ein, deine
-                  Lebenskraft-Energie bewusst wahrzunehmen, zu intensivieren und
-                  für das einzusetzen, was dir wichtig ist.
-                </p>
-                <p><strong>Dauer:</strong> 1 &frac12; bis 3 Stunden</p>
-              </div>
-              <button class="w3-button w3-light-grey w3-block">
-                <i class="fa fa-plus-circle"></i> Mehr Infos
-              </button>
+            <div class="w3-container">
+              <h3>Körperweisheit</h3>
+              <p class="w3-opacity">Einzelbegleitung für Frauen</p>
+              <p>
+                Raus aus dem Kopf - rein ins Spüren! <br />Sanfte Übungen aus
+                dem körperorientiertem Sexualcoaching laden dich ein, deine
+                Lebenskraft-Energie bewusst wahrzunehmen, zu intensivieren und
+                für das einzusetzen, was dir wichtig ist.
+              </p>
+              <p><strong>Dauer:</strong> 1 &frac12; bis 3 Stunden</p>
             </div>
           </div>
         </div>
@@ -334,7 +325,10 @@
                 und Tanz sind deine Wegbegleiter.
               </p>
               <p>
-                <button class="w3-button w3-light-grey w3-block">
+                <button
+                  onclick="openPdf()"
+                  class="w3-button w3-light-grey w3-block"
+                >
                   <i class="fa fa-plus-circle"></i> Mehr Infos
                 </button>
               </p>
@@ -495,6 +489,13 @@
         } else {
           x.className = x.className.replace(" w3-show", "");
         }
+      }
+
+      function openPdf() {
+        window.open(
+          "https://drive.google.com/file/d/1fT6wGPnl9Tq0asUgKJEyeOkouKj9uZIm/view?usp=sharing",
+          "_blank"
+        );
       }
     </script>
   </body>
