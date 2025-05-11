@@ -119,6 +119,9 @@
       .flex-horizontal {
         display: flex;
       }
+      .no-margin-bottom {
+        margin-bottom: 0;
+      }
 
       /* Turn off parallax scrolling for tablets and phones */
       @media only screen and (max-device-width: 1600px) {
@@ -224,22 +227,33 @@
     <!-- Container (Aktuelles Section) -->
     <div class="w3-container w3-padding-64 wave-top" id="aktuelles">
       <h3 class="w3-center">Aktuelles</h3>
-      <h4 class="w3-center">
-        Workshop-Reihe für Frauen: "Reise zu deiner Körperweisheit"
-      </h4>
+      <h4 class="w3-center">Gruppenworkshops für Frauen</h4>
+      <p class="w3-center">Die nächsten Termine sind:</p>
+      <div class="w3-row">
+        <div class="w3-col m6 w3-center">
+          <h4>2025</h4>
+          <h5 class="no-margin-bottom">Reise zu deiner Körperweisheit</h5>
+
+          Sonntag, 18. Mai<br />
+          Sonntag, 15. Juni <br />
+          <h5 class="no-margin-bottom">Loslassen - Raum schaffen für Neues</h5>
+          Sonntag, 5. Oktober<br />
+          <h5 class="no-margin-bottom">Herzöffnung mit allen Sinnen</h5>
+          Sonntag, 9. November
+        </div>
+        <div class="w3-col m6 w3-center">
+          <h4>2026</h4>
+          <h5 class="no-margin-bottom">Reise zu deiner Körperweisheit</h5>
+          Sonntag, 25. Jänner<br />
+          Sonntag, 22. Februar<br />
+          Sonntag, 8. März<br />
+          Sonntag, 12. April<br />
+          Sonntag, 31. Mai<br />
+        </div>
+      </div>
       <p class="w3-center">
-        <span
-          >Die nächsten Termine sind:<br />
-          Sonntag, 18. Mai 2025 <br />
-          Sonntag, 15. Juni 2025 <br />
-          <br />
-          Weitere Informationen zu den Workshops findest du
-          <a
-            href="https://drive.google.com/file/d/1LEMKHGU3zACsgleHsno2etJrOiuz94MH/view?usp=sharing"
-            target="_blank"
-            >hier</a
-          >.</span
-        >
+        Weitere Informationen zu den Workshops findest du
+        <a href="#angebote">hier</a>.
       </p>
       <br />
     </div>
@@ -256,15 +270,24 @@
           >Individuelle Termine und weitere Informationen gerne auf Anfrage</em
         >
       </p>
-      <div class="w3-row-padding flex-horizontal" style="margin-top: 32px">
-        <div class="w3-col l4 m6 w3-margin-bottom flex-horizontal">
-          <div class="w3-card w3-white w3-round-medium">
+      <div
+        class="w3-row-padding flex-horizontal"
+        style="margin-top: 32px; display: flex; flex-wrap: wrap"
+      >
+        <div class="w3-col l4 m6 w3-margin-bottom" style="display: flex">
+          <div
+            class="w3-card w3-white w3-round-medium"
+            style="width: 100%; display: flex; flex-direction: column"
+          >
             <img
               src="./assets/koerperweisheit.jpg"
               alt="John"
               style="width: 100%"
             />
-            <div class="w3-container">
+            <div
+              class="w3-container"
+              style="display: flex; flex-direction: column; flex-grow: 1"
+            >
               <h3>Atemreise</h3>
               <p class="w3-opacity">Einzelbegleitung</p>
               <p>
@@ -278,10 +301,16 @@
             </div>
           </div>
         </div>
-        <div class="w3-col l4 m6 w3-margin-bottom flex-horizontal">
-          <div class="w3-card w3-white w3-round-medium">
+        <div class="w3-col l4 m6 w3-margin-bottom" style="display: flex">
+          <div
+            class="w3-card w3-white w3-round-medium"
+            style="width: 100%; display: flex; flex-direction: column"
+          >
             <img src="./assets/atemreise.jpg" alt="John" style="width: 100%" />
-            <div class="w3-container">
+            <div
+              class="w3-container"
+              style="display: flex; flex-direction: column; flex-grow: 1"
+            >
               <h3>Körperweisheit</h3>
               <p class="w3-opacity">Einzelbegleitung für Frauen</p>
               <p>
@@ -294,29 +323,39 @@
             </div>
           </div>
         </div>
-        <div class="w3-col l4 m6 w3-margin-bottom flex-horizontal">
-          <div class="w3-card w3-white w3-round-medium">
+        <div class="w3-col l4 m6 w3-margin-bottom" style="display: flex">
+          <div
+            class="w3-card w3-white w3-round-medium"
+            style="width: 100%; display: flex; flex-direction: column"
+          >
             <img src="./assets/gruppe.jpg" alt="Jane" style="width: 100%" />
-            <div class="w3-container">
-              <h3>Zeit unter Frauen</h3>
-              <p class="w3-opacity">
-                Workshop-Reihe: "Reise zu deiner Körperweisheit"
-              </p>
+            <div
+              class="w3-container"
+              style="display: flex; flex-direction: column; flex-grow: 1"
+            >
+              <h3>Workshops für Frauen</h3>
               <p>
                 Im Frauenkreis nimmst du dir Zeit, tiefe Verbundenheit mit dir
                 selbst und deinem Körper zu spüren, deine ganz individuelle
-                Weiblichkeit zu erforschen und auszudrücken. Bewusstes Atmen,
-                Übungen aus dem körperorientiertem Sexualcoaching, Meditation
-                und Tanz sind deine Wegbegleiter.
+                Weiblichkeit zu erforschen und auszudrücken.
               </p>
-              <p>
+              <p class="w3-opacity">
+                "Reise zu deiner Körperweisheit"<br />
+                - Details
+                <a href="javascript:void(0)" onclick="openPdf()">hier</a>
+              </p>
+              <p class="w3-opacity">
+                "Ein Tag unter Frauen"<br />
+                - Details folgen
+              </p>
+              <!--               <p>
                 <button
                   onclick="openPdf()"
                   class="w3-button w3-light-grey w3-block"
                 >
                   <i class="fa fa-plus-circle"></i> Mehr Infos
                 </button>
-              </p>
+              </p> -->
             </div>
           </div>
         </div>
