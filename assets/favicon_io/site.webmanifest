@@ -1,1 +1,24 @@
-{"name":"","short_name":"","icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"}
+{
+  "name": "Atem und Lebendigkeit - Atemtraining & Körperarbeit",
+  "short_name": "Atem & Lebendigkeit",
+  "description": "Atemtraining und Körperarbeit mit Brigitte Röcklinger in Brunn am Gebirge, Österreich",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/assets/favicon_io/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicon_io/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#f6e2d6",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "lang": "de",
+  "orientation": "portrait-primary"
+}
