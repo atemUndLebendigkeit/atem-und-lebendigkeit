@@ -1,0 +1,11 @@
+# Robots.txt for atem-und-lebendigkeit.at
+# https://www.robotstxt.org/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://atem-und-lebendigkeit.at/sitemap.xml
+
+# Crawl-delay (optional - be nice to the server)
+Crawl-delay: 10
