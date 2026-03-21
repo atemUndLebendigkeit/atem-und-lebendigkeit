@@ -66,31 +66,6 @@
         line-height: 1.8;
         scroll-behavior: smooth;
       }
-      h1 {
-        font-family: "Quintessential", serif;
-        font-weight: 300;
-        font-style: normal;
-        font-size: 66px;
-        text-align: center;
-      }
-
-      /* Create a Parallax Effect */
-      .bgimg-1,
-      .bgimg-2,
-      .bgimg-3 {
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      .w3-wide {
-        letter-spacing: 10px;
-      }
-      .w3-hover-opacity {
-        cursor: pointer;
-      }
-
       .peachy-background {
         background-color: #f6e2d6;
       }
@@ -135,20 +110,79 @@
         margin-bottom: 0;
       }
 
-      /* Turn off parallax scrolling for tablets and phones */
+      .feedback-slider-wrapper {
+        overflow: hidden;
+        padding: 0 8px;
+      }
+      #feedback-track {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+      .feedback-card {
+        flex-shrink: 0;
+        padding: 0 12px;
+        box-sizing: border-box;
+      }
+      .feedback-quote {
+        text-align: center;
+        padding: 16px 24px 24px;
+        position: relative;
+      }
+      .feedback-quote::before {
+        content: "\275D";
+        font-family: "Quintessential", serif;
+        font-size: 72px;
+        line-height: 1;
+        color: #805e4e;
+        opacity: 0.22;
+        display: block;
+        margin-bottom: 8px;
+      }
+      .feedback-text {
+        font-style: italic;
+        line-height: 1.8;
+        margin: 0 0 16px 0;
+      }
+      .feedback-name {
+        color: #805e4e;
+        opacity: 0.75;
+        font-size: 0.9em;
+        letter-spacing: 2px;
+      }
+      .feedback-toggle {
+        background: none;
+        border: none;
+        color: #805e4e;
+        font-size: 0.85em;
+        cursor: pointer;
+        padding: 4px 0;
+        opacity: 0.65;
+        display: block;
+        margin: 0 auto 8px;
+      }
+      .feedback-toggle:hover { opacity: 1; }
+
+      .feedback-dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 28px;
+      }
+      .feedback-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #d4b8ac;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        transition: background 0.3s;
+      }
+      .feedback-dot.active {
+        background: #805e4e;
+      }
+
       @media only screen and (max-device-width: 1600px) {
-        .bgimg-1,
-        .bgimg-2,
-        .bgimg-3 {
-          background-attachment: scroll;
-          min-height: 400px;
-        }
-
-        h1 {
-          margin-top: 40px;
-          font-size: 32px;
-        }
-
         .fit-to-parent {
           height: 70%;
         }
@@ -244,6 +278,9 @@
         <a href="#uebermich" class="w3-bar-item w3-button w3-hide-small"
           ><i class="fa fa-user"></i> ÜBER MICH</a
         >
+        <a href="#feedback" class="w3-bar-item w3-button w3-hide-small"
+          ><i class="fa fa-comment"></i> FEEDBACK</a
+        >
         <a href="#kontakt" class="w3-bar-item w3-button w3-hide-small"
           ><i class="fa fa-envelope"></i> KONTAKT</a
         >
@@ -271,6 +308,12 @@
           class="w3-bar-item w3-button"
           onclick="toggleFunction()"
           >ÜBER MICH</a
+        >
+        <a
+          href="#feedback"
+          class="w3-bar-item w3-button"
+          onclick="toggleFunction()"
+          >FEEDBACK</a
         >
         <a
           href="#kontakt"
@@ -459,7 +502,6 @@
             />
           </div>
 
-          <!-- Hide this text on small devices -->
           <div class="w3-col m6 w3-hide-small w3-padding-large">
             <h4>Ausbildungen und Kurse</h4>
             <ul>
@@ -492,8 +534,19 @@
       </div>
     </div>
 
+    <!-- Container (Feedback Section) -->
+    <div class="w3-container w3-padding-64 peachy-background" id="feedback">
+      <div class="w3-content" style="max-width: 1200px">
+        <h3 class="w3-center">Feedback</h3>
+        <div class="feedback-slider-wrapper" id="feedback-slider">
+          <div id="feedback-track"></div>
+        </div>
+        <div class="feedback-dots" id="feedback-dots"></div>
+      </div>
+    </div>
+
     <!-- Container (Contact Section) -->
-    <div class="w3-container w3-padding-16 peachy-background" id="kontakt">
+    <div class="w3-container w3-padding-16" id="kontakt">
       <h3 class="w3-center">KONTAKT</h3>
       <div class="w3-row w3-padding-32 w3-center">
         <div class="w3-center">
@@ -520,30 +573,12 @@
     </div>
 
     <!-- Footer -->
-    <footer class="w3-center peachy-background w3-padding-16">
-      <a href="#home" class="w3-button w3-white w3-margin-bottom"
+    <footer class="w3-center w3-padding-16">
+      <a href="#home" class="w3-button peachy-background w3-margin-bottom"
         ><i class="fa fa-arrow-up w3-margin-right"></i>Zurück zum Anfang</a
       >
       <br />
       <a href="./subpages/impressum.html">Impressum</a>
-      <!--       <div class="w3-xlarge w3-section">
-        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-        <i class="fa fa-instagram w3-hover-opacity"></i>
-        <i class="fa fa-snapchat w3-hover-opacity"></i>
-        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-        <i class="fa fa-twitter w3-hover-opacity"></i>
-        <i class="fa fa-linkedin w3-hover-opacity"></i>
-      </div>
-      <p>
-        Powered by
-        <a
-          href="https://www.w3schools.com/w3css/default.asp"
-          title="W3.CSS"
-          target="_blank"
-          class="w3-hover-text-green"
-          >w3.css</a
-        >
-      </p> -->
     </footer>
 
     <script>
@@ -576,6 +611,161 @@
           x.className = x.className.replace(" w3-show", "");
         }
       }
+
+      // Feedback Slider
+      (function () {
+        var wrapper   = document.getElementById("feedback-slider");
+        var track     = document.getElementById("feedback-track");
+        var dotsEl    = document.getElementById("feedback-dots");
+        var feedbacks = [];
+        var total     = 0;
+        var current   = 0;
+        var timer     = null;
+        var isDesktop = false;
+
+        function vis() { return window.innerWidth > 600 ? 3 : 1; }
+
+        function makeCard(f) {
+          var truncated = f.text.length > 350;
+          var shortText = truncated ? f.text.slice(0, 350) + '\u2026' : f.text;
+
+          var d = document.createElement("div");
+          d.className = "feedback-card";
+          d.innerHTML =
+            '<div class="feedback-quote">' +
+              '<p class="feedback-text">\u201e' + shortText + '\u201c</p>' +
+              (truncated ? '<button class="feedback-toggle">Mehr lesen \u2193</button>' : '') +
+              '<span class="feedback-name">\u2013 ' + f.name + '</span>' +
+            '</div>';
+
+          if (truncated) {
+            var btn = d.querySelector('.feedback-toggle');
+            var p   = d.querySelector('.feedback-text');
+            var expanded = false;
+            btn.addEventListener('click', function (e) {
+              e.stopPropagation();
+              expanded = !expanded;
+              p.innerHTML = '\u201e' + (expanded ? f.text : shortText) + '\u201c';
+              btn.textContent = expanded ? 'Weniger \u2191' : 'Mehr lesen \u2193';
+            });
+          }
+
+          return d;
+        }
+
+        function buildTrack() {
+          track.innerHTML = "";
+          isDesktop = vis() === 3;
+
+          if (isDesktop) {
+            track.appendChild(makeCard(feedbacks[total - 2]));
+            track.appendChild(makeCard(feedbacks[total - 1]));
+          }
+          feedbacks.forEach(function (f) { track.appendChild(makeCard(f)); });
+          if (isDesktop) {
+            track.appendChild(makeCard(feedbacks[0]));
+            track.appendChild(makeCard(feedbacks[1]));
+          }
+        }
+
+        function applyWidths() {
+          var cw = wrapper.offsetWidth / vis();
+          track.querySelectorAll(".feedback-card").forEach(function (c) {
+            c.style.width = cw + "px";
+          });
+          return cw;
+        }
+
+        function snapTo(translateX) {
+          track.style.transition = "none";
+          track.style.transform  = "translateX(" + translateX + "px)";
+          track.offsetHeight;   // force reflow so transition removal takes effect
+        }
+
+        function slideTo(translateX) {
+          track.style.transition = "transform 0.5s ease";
+          track.style.transform  = "translateX(" + translateX + "px)";
+        }
+
+        function offsetFor(idx, cw) {
+          return isDesktop ? -(idx + 1) * cw : -idx * cw;
+        }
+
+        function updateDots() {
+          dotsEl.querySelectorAll(".feedback-dot").forEach(function (d, i) {
+            d.classList.toggle("active", i === current);
+          });
+        }
+
+        function goTo(idx) {
+          current = ((idx % total) + total) % total;
+          var cw = applyWidths();
+          slideTo(offsetFor(current, cw));
+          updateDots();
+        }
+
+        function advance() {
+          var cw   = applyWidths();
+          var next = (current + 1) % total;
+
+          if (!isDesktop || next !== 0) {
+            current = next;
+            slideTo(offsetFor(current, cw));
+            updateDots();
+          } else {
+            track.style.transition = "transform 0.5s ease";
+            track.style.transform  = "translateX(" + (-(total + 1) * cw) + "px)";
+
+            function onEnd() {
+              track.removeEventListener("transitionend", onEnd);
+              current = 0;
+              snapTo(offsetFor(0, cw));
+              updateDots();
+            }
+            track.addEventListener("transitionend", onEnd);
+          }
+        }
+
+        function buildDots() {
+          dotsEl.innerHTML = "";
+          for (var i = 0; i < total; i++) {
+            var dot = document.createElement("button");
+            dot.className = "feedback-dot" + (i === current ? " active" : "");
+            dot.setAttribute("aria-label", "Feedback " + (i + 1));
+            (function (idx) {
+              dot.addEventListener("click", function () { goTo(idx); reset(); });
+            })(i);
+            dotsEl.appendChild(dot);
+          }
+        }
+
+        function start() { timer = setInterval(advance, 7000); }
+        function reset() { clearInterval(timer); start(); }
+
+        function init() {
+          buildTrack();
+          buildDots();
+          goTo(current);
+        }
+
+        wrapper.addEventListener("mouseenter", function () { clearInterval(timer); });
+        wrapper.addEventListener("mouseleave", start);
+
+        var debounce;
+        window.addEventListener("resize", function () {
+          clearTimeout(debounce);
+          debounce = setTimeout(init, 200);
+        });
+
+        fetch("./feedbacks.json")
+          .then(function (r) { return r.json(); })
+          .then(function (data) {
+            feedbacks = data;
+            total     = data.length;
+            init();
+            start();
+          });
+      })();
 
       function openPdf() {
         window.open(
