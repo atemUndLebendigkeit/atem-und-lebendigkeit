@@ -372,9 +372,11 @@
           <h4>2026</h4>
           <h5 class="no-margin-bottom">Reise zu deiner Körperweisheit</h5>
           Sonntag, 31. Mai<br />
-          <h5 class="no-margin-bottom">Loslassen – Raum schaffen für Neues</h5>
+          <h5 class="no-margin-bottom">Loslassen - Raum schaffen für Neues</h5>
           Sonntag, 11. Oktober<br />
-          <h5 class="no-margin-bottom">Selbstbestimmt – frei sein im Frausein</h5>
+          <h5 class="no-margin-bottom">
+            Selbstbestimmt - frei sein im Frausein
+          </h5>
           Sonntag, 15. November<br />
         </div>
         <div class="w3-col l6 m6 w3-center">
@@ -488,9 +490,17 @@
                 Weiblichkeit zu erforschen und auszudrücken.
               </p>
               <p class="w3-opacity">
-                "Reise zu deiner Körperweisheit"<br />
-                - Details
-                <a href="javascript:void(0)" onclick="openPdf()">hier</a>
+                "Reise zu deiner Körperweisheit" - Details
+                <a href="javascript:void(0)" onclick="openPdf('reise')">hier</a>
+                <br />
+                "Loslassen - Raum schaffen für Neues" - Details
+                <a href="javascript:void(0)" onclick="openPdf('loslassen')"
+                  >hier</a
+                ><br />
+                "Selbstbestimmt - frei sein im Frausein" - Details
+                <a href="javascript:void(0)" onclick="openPdf('selbstbestimmt')"
+                  >hier</a
+                >
               </p>
               <!--               <p>
                 <button
@@ -832,11 +842,23 @@
           });
       })();
 
-      function openPdf() {
-        window.open(
-          "https://drive.google.com/file/d/1AVwVC_SyhkQqQVw9kYN83ZYMuu9TRJE0/view?usp=sharing",
-          "_blank",
-        );
+      function openPdf(pdfName) {
+        var pdfUrl;
+        switch (pdfName) {
+          case "reise":
+            pdfUrl =
+              "https://drive.google.com/file/d/1HXfYE0coUtiazgrt42KvXCKL9Dg0542i/view?usp=drive_link";
+            break;
+          case "loslassen":
+            pdfUrl =
+              "https://drive.google.com/file/d/1B2UEmq7CT39oxJ1d2LSZRAaQ1mhYhCJ4/view?usp=drive_link";
+            break;
+          case "selbstbestimmt":
+            pdfUrl =
+              "https://drive.google.com/file/d/1qHg_MIaCnbTa85zYvqHxTBgb7hijrqbn/view?usp=drive_link";
+            break;
+        }
+        window.open(pdfUrl, "_blank");
       }
     </script>
   </body>
